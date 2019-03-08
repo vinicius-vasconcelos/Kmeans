@@ -3,10 +3,10 @@
 <hr>
 <ul>
   <li>
-    O projeto utiliza interface gráfica construida atraves do <a href="https://gluonhq.com/products/scene-builder/">Scene Builder.</a>  </li>
+    O projeto utiliza interface gráfica construida através do <a href="https://gluonhq.com/products/scene-builder/">Scene Builder.</a>  </li>
   <li>
-    Também foi utilizada biblioteca <a href="https://github.com/jfoenixadmin/JFoenix">JFoenix.</a>
+    Também foi utilizada a biblioteca <a href="https://github.com/jfoenixadmin/JFoenix">JFoenix.</a>
   </li>
   <li>
-    Possui um arquivo de teste.txt dentro do projeto e a possibilidade livre escolha de centróides e dimensões. 
+    Possui um arquivo de teste.txt dentro do projeto e a possibilidade livre escolha de centróides e dimensões, para menipular este projeto. 
   </li>
