@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BubbleChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kmeans.FXMLDocumentController">
+   <top>
+      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="678.0" spacing="30.0" style="-fx-background-color: #008080;" BorderPane.alignment="CENTER">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+         <children>
+            <Label text="Kas-Minas" textFill="#3e0e4c">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #008080;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+         <children>
+            <Label layoutX="52.0" layoutY="14.0" text="Menu" textFill="#3e0e4c">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="87.0" layoutY="60.0" startX="-85.0" />
+            <JFXComboBox fx:id="cbVisao1" labelFloat="true" layoutX="29.0" layoutY="397.0" prefHeight="25.0" prefWidth="144.0" />
+            <Label layoutX="29.0" layoutY="380.0" text="Perspectiva 1:" />
+            <JFXComboBox fx:id="cbVisao2" labelFloat="true" layoutX="26.0" layoutY="449.0" prefHeight="25.0" prefWidth="144.0" />
+            <Label layoutX="26.0" layoutY="432.0" text="Perspectiva 2:" />
+            <JFXButton fx:id="btGerar" buttonType="RAISED" layoutX="20.0" layoutY="492.0" maxHeight="25.0" maxWidth="53.0" minHeight="25.0" minWidth="53.0" onAction="#evtBtGerar" prefHeight="25.0" prefWidth="53.0" style="-fx-background-color: #3e0e4c;" text="Gerar" textFill="WHITE" />
+            <JFXButton fx:id="btLimpar" buttonType="RAISED" layoutX="118.0" layoutY="492.0" onAction="#evtBtLimpar" style="-fx-background-color: #3e0e4c;" text="Limpar" textFill="WHITE" />
+            <AnchorPane fx:id="pnAleatorio" layoutX="3.0" layoutY="109.0" prefHeight="166.0" prefWidth="184.0" style="-fx-background-color: #4ca6a6;">
+               <children>
+                  <JFXTextField fx:id="tfCentroid" focusColor="#3e0e4c" labelFloat="true" layoutX="17.0" layoutY="77.0" prefHeight="25.0" prefWidth="151.0" promptText="Centróides:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXButton fx:id="btOk" buttonType="RAISED" layoutX="76.0" layoutY="127.0" onAction="#evtBtOk" ripplerFill="#34af23" style="-fx-background-color: #3e0e4c;" text="Ok" textFill="WHITE" />
+                  <JFXTextField fx:id="tfDimensoes" focusColor="#3e0e4c" labelFloat="true" layoutX="17.0" layoutY="14.0" prefHeight="25.0" prefWidth="151.0" promptText="Dimensões:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </AnchorPane>
+            <JFXRadioButton fx:id="rbAleatorio" layoutX="-5.0" layoutY="85.0" onAction="#evtRbAleatorio" text="Aleatório:" />
+            <JFXRadioButton fx:id="rbArquivo" layoutX="-2.0" layoutY="288.0" onAction="#evtRbArquivo" text="Via Arquivo:" />
+            <JFXButton fx:id="btArquivo" buttonType="RAISED" layoutX="52.0" layoutY="324.0" onAction="#evtBtArquivo" ripplerFill="#34af23" style="-fx-background-color: #3e0e4c;" text="Abrir Arquivo" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </right>
+   <left>
+      <BubbleChart fx:id="bcGrafico" prefHeight="489.0" prefWidth="599.0" style="-fx-background-color: #4ca6a6;" BorderPane.alignment="CENTER">
+        <xAxis>
+          <NumberAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+         <BorderPane.margin>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </BorderPane.margin>
+      </BubbleChart>
+   </left>
+   <padding>
+      <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+   </padding>
+</BorderPane>
